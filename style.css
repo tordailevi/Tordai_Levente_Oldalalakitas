@@ -8,7 +8,7 @@ body{
     animation: color 8s ease-in-out infinite;
 }
 main {
-    width:80%;
+    width:90%;
     max-width: 1000px;
     margin:auto;
 }
