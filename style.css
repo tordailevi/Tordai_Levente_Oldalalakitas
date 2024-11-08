@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #b10505, #000000,#b10505, #000000);
+    background-size: 150%, 150%;
+    animation: color 8s ease-in-out infinite;
+}
+main {
+    width:80%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+article, aside, footer, nav {
+    box-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke;
+    padding:10px;
+}
+
+
+img{
+    width:100%;
+    box-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke;
+    transition: transform 0.8s ease, opacity 0.3s ease;
+    
+}
+
+img:hover {
+    transform: scale(1.2); 
+  }
+
+h2{
+    font-family: monospace;
+    text-decoration: underline overline;
+    font-size: 15px;
+    color:whitesmoke;
+}
+
+.tartalom{
+    border: 1px solid whitesmoke;
+    padding:3px;
+}
+
+nav ul{
+    padding-left: 0px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    color:whitesmoke;
+    list-style-type: none;
+    font-family: monospace;
+    text-align: center;
+    gap: 5px;
+}
+
+nav li{
+    border-radius: 30px;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke;
+    color:whitesmoke
+    
+}
+
+.kep{
+    height: 100px;
+    overflow: hidden;
+
+}
+
+.cost{
+    font-family: monospace;
+    color:whitesmoke;
+    font-size: 10px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "a as"
+    "f f"
+    ;
+    gap:10px;
+}
+
+header{
+    grid-area:h;
+    font-size: 15px;
+    font-family: monospace;
+    text-align: center;
+    text-decoration: line-through;
+    border-radius:15px;
+    color: whitesmoke;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke
+}
+
+nav{
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke;
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+
+}
+
+aside{
+    grid-area: as;
+    color:whitesmoke;
+}
+
+footer{
+    grid-area: f;
+    font-family: monospace;
+    text-align: center;
+    border-radius:15px;
+    color: whitesmoke;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke
+}
+
+.csipetcsapat{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: monospace;
+    padding-bottom: 150px;
+    font-size: 13px;
+    text-align: center;
+    color:whitesmoke;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke
+}
+
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:650px){
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "as"
+        "a"
+        "f";
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+
+    }
+    50%{
+        background-position: 100% 50%;
+
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
