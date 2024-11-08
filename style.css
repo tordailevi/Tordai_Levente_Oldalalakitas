@@ -74,12 +74,12 @@ nav li{
 
 main{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns:1fr 3fr 1fr;
     grid-template-areas: 
-    "h h"
-    "n n"
-    "a as"
-    "f f"
+    "h h h"
+    "n n n"
+    "k a as"
+    "f f f"
     ;
     gap:10px;
 }
@@ -108,8 +108,13 @@ article{
 
 }
 
-aside{
+.rolunk{
     grid-area: as;
+    color:whitesmoke;
+}
+.kosar{
+    grid-area: k;
+    grid-template-columns: 1fr 1fr;
     color:whitesmoke;
 }
 
@@ -140,25 +145,6 @@ h3{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width:650px){
     nav ul{
         grid-template-columns: 1fr;
@@ -167,6 +153,7 @@ h3{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "h"
+        "k"
         "n"
         "as"
         "a"
